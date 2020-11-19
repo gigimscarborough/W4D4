@@ -16,4 +16,11 @@ describe Array do
             expect(my_array.two_sum).to eq([[0, 4], [2, 3]])
         end
     end
+
+    describe "#my_transpose" do
+        it "should accept a grid of numbers and convert rows to columns" do
+            my_array = [[0, 1, 2],[3, 4, 5],[6, 7, 8]]
+            expect(my_array.my_transpose).to eq([[0, 3, 6],[1, 4, 7], [2, 5, 8]])
+        end
+    end
 end
