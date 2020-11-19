@@ -30,4 +30,5 @@ describe Array do
             expect(my_array.stock_picker).to eq([1, 2])
         end
     end
+
 end
