@@ -14,4 +14,16 @@ class Array
         end
         pairs
     end
+
+    def my_transpose
+        transposed = []
+        (0...self.length).each do |i1|
+             sub_arr = []
+            (0...self.length).each do |i2|
+                sub_arr << self[i2][i1]
+            end
+            transposed << sub_arr
+        end
+        transposed
+    end
 end
