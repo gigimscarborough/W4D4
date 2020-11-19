@@ -26,4 +26,21 @@ class Array
         end
         transposed
     end
+
+    def stock_picker
+        pairs = []
+        (0...self.length).each do |i1|
+            (0...self.length).each do |i2|
+                pairs << [self[i1], self[i2]] if i2 > i1 && self[i1] < self[i2]
+            end
+        end
+        accum = pairs.inject do |acc, el|
+            if (acc[1] - acc[0]) < (el[1] - el[0])
+                acc = el
+            else
+                acc
+            end
+        end
+        [self.index(accum[0]), self.index(accum[1])]
+    end
 end

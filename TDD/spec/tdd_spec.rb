@@ -23,4 +23,11 @@ describe Array do
             expect(my_array.my_transpose).to eq([[0, 3, 6],[1, 4, 7], [2, 5, 8]])
         end
     end
+
+    describe "#stock_picker" do
+        it "should take an array of stock prices and return the pair of indexes where you would make the most profit from buying and selling" do
+            my_array = [8, 2, 5, 4, 3]
+            expect(my_array.stock_picker).to eq([1, 2])
+        end
+    end
 end
